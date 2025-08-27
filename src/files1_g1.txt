@@ -1,0 +1,9 @@
+x-coordinate  |  Character		|	y-coordinate
+0				u2588				0
+0				u2588				1
+0				u2588				2
+1				u2586				1
+1				u2586				2
+2				u2586				1
+2				u2586				2
+3				u2586				2
