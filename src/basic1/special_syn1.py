@@ -95,10 +95,28 @@ def conditional1():
     else:
         print("a is not None")
 
-def range1():
-    import random
-    
+class Class1:
+    def __init__(self, arg1, arg2):
+        print("Class1.__init__(self):{},{}".format(arg1,arg2))
+    def f1(self,arg1,arg2):
+        print("Class1.f1()")
+        return arg1
+
+class Class2:
+    def __init__(self, arg1):
+        print("Class2.__init__(self):{}".format(arg1))
+
+def eval1():
+    try:
+        obj1 = Class1('a','b')
+        c = eval("{}".format(obj1.__class__.__name__))
+    except Exception as e:
+        print(f"{type(e)}: {e}")
+        print( "Visitor for {} not found".format(obj1.__class__.__name__))
+    else:
+        visitor = c('e','f')
+        visitor.f1('c','d')
 
 if __name__ == "__main__":
-    list1()
+    eval1()
 

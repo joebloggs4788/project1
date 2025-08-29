@@ -9,21 +9,21 @@ class TemplateMethodAbstractBaseClass(metaclass = abc.ABCMeta):
         self._send_transaction()
     
     @abc.abstractmethod
-    def _step1(): pass
+    def _step1(self): pass
     @abc.abstractmethod
-    def _step2(): pass
+    def _step2(self): pass
     @abc.abstractmethod
-    def _step3(): pass
+    def _step3(self): pass
 
     @abc.abstractmethod
-    def _send_transaction(*arg): pass
+    def _send_transaction(self,*arg): pass
 
 class ConcreteImplementationClass(TemplateMethodAbstractBaseClass):
-    def _step1():
+    def _step1(self):
         print("ConcreteImplementationClass._step1()")
-    def _step2():
+    def _step2(self):
         print("ConcreteImplementationClass._step2()")
-    def _step3():
+    def _step3(self):
         print("ConcreteImplementationClass._step3()")
-    def _send_transaction(*arg):
+    def _send_transaction(self,*arg):
         print("ConcreteImplementationClass._send_transaction()")
